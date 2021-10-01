@@ -26,11 +26,8 @@ const winner_url = 'https://www.kc-foods.com/20210920flavoredmilk/winner.aspx';
 
 function checkDate(){
     const currentDate = new Date();
-    // const currentMonth = parseInt(currentDate.getMonth());
-    // const currentDay = parseInt(currentDate.getDay());
-    const currentMonth = 9;
-    const currentDay = 28;
-
+    const currentMonth = parseInt(currentDate.getMonth());
+    const currentDay = parseInt(currentDate.getDay());
     for(let pickDate of pickDateList){
         const pickArray = pickDate.split('/')
         const pickMonth = parseInt(pickArray[0]);
@@ -59,7 +56,7 @@ async function sendLineNotify(messageContent){
         })
     };
     try{
-        const resp = await axios(options);
+        await axios(options);
         console.log('Send line notify success');
     }
     catch (error){
