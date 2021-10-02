@@ -26,8 +26,10 @@ const winner_url = 'https://www.kc-foods.com/20210920flavoredmilk/winner.aspx';
 
 function checkDate(){
     const currentDate = new Date();
-    const currentMonth = parseInt(currentDate.getMonth());
-    const currentDay = parseInt(currentDate.getDay());
+    console.log(currentDate)
+    const currentMonth = parseInt(currentDate.getMonth())+1;
+    const currentDay = parseInt(currentDate.getDate());
+    console.log(currentMonth,currentDay)
     for(let pickDate of pickDateList){
         const pickArray = pickDate.split('/')
         const pickMonth = parseInt(pickArray[0]);
