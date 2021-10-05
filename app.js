@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const querystring = require('querystring');
 
-const pickDateList = ['9/27, 10/4, 10/11, 10/18, 10/25, 11/1, 11/8, 11/15, 11/22, 12/03']
+const pickDateList = ['9/27', '10/4', '10/11', '10/18', '10/25', '11/1', '11/8', '11/15', '11/22', '12/03']
 const winner_url = 'https://www.kc-foods.com/20210920flavoredmilk/winner.aspx';
 
 (async ()=>{
